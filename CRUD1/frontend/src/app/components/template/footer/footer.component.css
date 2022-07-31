@@ -1,0 +1,16 @@
+.footer{
+    background-color:rgb(236, 236, 236);
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer .title-group{
+    color: black;
+}
+
+.footer > span{
+    font-weight: 300;
+    font-size: 1.1rem;
+}

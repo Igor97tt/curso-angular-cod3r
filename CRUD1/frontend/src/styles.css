@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+/* Estilo global do projeto*/
+
+html,
+body {
+  height: 100%;
+} /*Define algumas propriedades globais do projeto */
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+} /*Define algumas 
+propriedades globais do projeto */
+
+.red {
+  /*Cria um classe chamada "red" para ser aplicada a qualquer coisa que desejamos
+ mudar a cor para vermelho*/
+  color: rgb(227, 94, 107);
+}
+
+.v-middle {
+  /*Cria uma classe que define um parâmetro de alinhamento para o que desejamos alinhar
+    no centro*/
+  vertical-align: middle;
+}
+
+.msg-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.msg-error {
+  background-color: #e35e6b;
+  color: #fff;
+}

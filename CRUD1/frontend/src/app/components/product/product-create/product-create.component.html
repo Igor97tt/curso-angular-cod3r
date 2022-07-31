@@ -1,0 +1,29 @@
+<!-- Componente de criação de produto -->
+
+<mat-card class="mat-card">
+    <mat-card-title>Novo Produto</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input class="nome" matInput placeholder="Nome" 
+            [(ngModel)]="product.name" name="name">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" 
+            [(ngModel)]="product.price" name="price">
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createProduct()" color="primary"> <!--Chama o método que faz a rota-->
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancel()"> <!--Chama o método que faz a rota-->
+        Cancelar
+    </button>
+</mat-card>
+
+
+
+<!--<p [id]="propLegal">product-create works!</p> = Binding de atributo
+
+<button (click)="fazerAlgo()">Fazer algo!</button>  = Binding de evento-->
