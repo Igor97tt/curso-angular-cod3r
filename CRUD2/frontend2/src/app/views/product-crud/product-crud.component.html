@@ -1,1 +1,11 @@
-<p>product-crud works!</p>
+<button mat-raised-button (click)="navigateToProductCreate()">
+    Novo Produto
+</button>
+
+<!--<button mat-raised-button routerLink="/products/create">
+        Novo Produto 2 sem router
+</button><!-->
+
+<!--Aparentemente é possível usar o atributo routerLink dentro de uma tag
+de button, não sendo necessário uma bind de evento para chamar um método
+que faz a navegação através da injeção de dependência de um router-->
