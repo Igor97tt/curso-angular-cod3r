@@ -1,5 +1,7 @@
+import { Product } from './../product.model';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-create',
@@ -9,9 +11,25 @@ import { ProductService } from '../product.service';
 
 export class ProductCreateComponent implements OnInit {
 
-  constructor(private productService: ProductService) { }
+  product: Product = {
+    name: '',
+    price: null
+  }
+
+  constructor(private productService: ProductService, private router: Router) { }
 
   ngOnInit(): void {
-    this.productService.showOnConsole('teste...')
+
+  }
+
+  createProduct(): void {
+    this.productService.create(this.product).subscribe(() => {
+      this.productService.showMessage('Operação executada com sucesso!')
+      this.router.navigate(['/products'])
+    })
+  }
+
+  cancel(): void {
+    this.router.navigate(['/products'])
   }
 }
