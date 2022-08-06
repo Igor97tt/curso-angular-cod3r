@@ -1,0 +1,19 @@
+
+
+
+
+one way data binding
+	binding de atributo
+
+two way data binding
+	binding de atributo
+	+
+	binding de evento
+
+
+
+binding de atributo = html vai acessar informações do componente |ou seja| componente(ts) -> html(html)
+[]
+
+binding de evento = liga um event no html para um método dentro do componente(ts) associado ao html
+()
