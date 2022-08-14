@@ -23,13 +23,15 @@ export class ProductCreateComponent implements OnInit {
   }
 
   createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage('Operação executada com sucesso!')
+    this.productService.create(this.product).subscribe(() => { //Chama o método create
+      //de dentro do productService e manda como parâmetro um produto. Espera a
+      //confirmação (observable) de que o produto foi criado.
+      this.productService.showMessage('Operação executada com sucesso!')//Mostra msg
       this.router.navigate(['/products'])
     })
   }
 
-  cancel(): void {
+  cancel(): void {// Método que cancela e volta à página de produtos
     this.router.navigate(['/products'])
   }
 }

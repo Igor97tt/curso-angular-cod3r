@@ -23,7 +23,17 @@ export class ProductService {
     })
   }
 
-  create(product: Product): Observable<Product>{
-    return this.http.post<Product>(this.baseUrl, product) //cria o produto no backend
+  create(product: Product): Observable<Product>{//Método que retorna um observable 
+    //(confirmação) de produto para quem chamou. Recebe como parâmetro um produto.
+    return this.http.post<Product>(this.baseUrl, product) //Tem como retorno a 
+    //inserção do produto recebido via parametro no backend, desta forma criando 
+    //o produto.
+  }
+
+  read(): Observable<Product[]>{ //Método que retorna um observable (confirmação)
+    //de array de produtos pra quem chamou
+    return this.http.get<Product[]>(this.baseUrl) //Tem como retorno uma array de
+    //produtos que foi encontrada através de uma busca com o método "get" dentro da
+    //base de dados. Manda como parâmetro a url base.
   }
 }
