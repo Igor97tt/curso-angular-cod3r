@@ -1,0 +1,53 @@
+O Angular é um framework completo para desenvolvimento para a web e para dispositivos móveis. O React é um framework somente para o desenvolvimento de UIs, que pode ser transformado em uma solução completa com o auxílio de bibliotecas adicionais.
+
+A arquitetura do Angular é baseada em componentes, que funcionam como blocos de construção adicionados conforme a necessidade de utilização. Isso torna o desenvolvimento da aplicação mais flexível, pois facilita a reutilização de códigos sem a necessidade de escrevê-los novamente.
+
+O React parece ser mais simples à primeira vista, levando menos tempo para se começar a trabalhar com um projeto em React. Porém, essa simplicidade como vantagem principal do React é neutralizada pelo fato de você ter de aprender a trabalhar com frameworks e ferramentas adicionais em JavaScript.
+
+O Angular em si é mais complexo e leva mais tempo para dominar. Ainda assim, ele é uma ferramenta poderosa que oferece uma experiência geral para o desenvolvimento para a web. Uma vez que se aprende a trabalhar com ele, você já pode colher os frutos.
+
+O Angular é um framework utilizado para a criação de Single-Page Applications (SPA), que é uma aplicação web consumida em uma única página.
+
+Quando uma página SPA é acessada pela primeira vez todas as requisições são processadas para o seu carregamento completo. Caso a pessoa usuária queira, por exemplo, buscar um produto, somente essa requisição é enviada ao servidor por meio de solicitações AJAX e o retorno é referente apenas ao resultado dessa busca.
+
+A atualização é feita dinamicamente e apenas referente a solicitação em questão, sem o recarregamento total da página. Isso reduz a quantidade de dados trafegados, o tempo de processamento e elimina a necessidade de recarregar a página inteira sempre que qualquer requisição for feita.
+
+Dessa forma, a experiência da pessoa usuária fica mais fluída, ou seja, a comunicação entre o navegador e o servidor é praticamente transparente para ela.
+
+Basicamente, a Angular CLI cria toda a estrutura necessária para o projeto, com os arquivos, diretórios e scripts necessários para o desenvolvimento da aplicação. Existem outras formas de criar uma aplicação Angular, entretanto, a utilização da ferramenta Angular CLI torna essa tarefa muito mais rápida e livre de erros.
+
+* angular.json: Traz propriedades sobre o projeto, entre elas qual é o caminho do arquivo principal main.ts;
+* main.ts: Classe principal que inicia o módulo principal AppModule e contém configurações sobre o ambiente que são necessárias para a inicialização da aplicação;
+* app.module.ts: Módulo principal que inicia o componente principal AppComponent e consta a declaração dos módulos utilizados na aplicação;
+* app.components.ts: Componente principal que possui todos os outros componentes do projeto e relaciona os componentes utilizados no projeto;
+* index.html: A página principal para a exibição no navegador.
+
+Componente = Faz referência a um componente visual dentro da SPA e pode conter o arquivo ts, o html, e o css. Não é obrigatório css e nem o html pois este pode ser escrito dentro do .ts do componente como uma string;
+
+Diretivas = Existem diretivas de atributo e de estrutura: as de atributo mudam a aparencia ou o comportamento (css) de elementos na página. As de Estrutura alteram o layout adicionando um removendo elementos na DOM = document objetc model (html).
+
+Decorator = Padrao de projeto que define a função de uma classe exercida dentro do projeto. Ex = @component = a classe agora é um componente. @injectable = a classe agora é um serviço que pode ser injetado via injeção de dependencia. @directive = a classe agora é uma diretiva estrutural ou de atributo.
+
+Property binding = Faz a ligação de um atributo dentro do html a uma variavel de mesmo nome na classe do componente, pegando o valor da variavel e associando ao html. É uma forma de acessar dados dentro da classe do componente atraves de um atributo no html. Html vai acessar informações do componente, ou seja, componente(ts) -> html(html). Utiliza []
+
+Event binding = Faz a ligação de um evento no html para um método dentro do componente associado ao html. utiliza ()
+
+One Way Data Binding = Html busca informações dentro do ts. TS > HTML (utiliza binding de atributo)
+
+two way data binding = Sentido de alteração nas duas direções: Se mudar no ts muda no html e se mudar no html muda no ts. Utiliza [(ngModel)].
+
+two way data binding
+	binding de atributo
+	+
+	binding de evento
+
+Pipes = Processamentos em cima de variaveis, muda o formato de algo que é apresentado na tela. Útil para mudar o formato que chegou de um banco de dados para adequar ao sistema ou cultura.
+
+Observables = É uma funcionalidade da biblioteca rxjs que lida com transferência de dados assíncrona (sem resposta imediata na chamada do código) através da implementação de programação reativa. Espera receber a confirmação de um evento e logo após informar a confirmação, faz alguma ação.
+
+Services = São classes com o objetivo de organizar e compartilhar métodos e dados entre componentes. Possui as regras que não dizem respeito a parte visual de um componente. Ideal para acessar backend e manter todo o código que não seja específico do componente. @Injectable. Ideal para não repetir o código dentro dos componente. É o padrão no qual a classe recebe as dependências de uma fonte externa ao invés de criar por conta própria.
+
+https://wkrueger.gitbook.io/angular/ - LER!!
+https://blog.geekhunter.com.br/um-overview-sobre-o-framework-angular/ - LER!!
+https://www.hostinger.com.br/tutoriais/api-restful - API REST, LER!!
+

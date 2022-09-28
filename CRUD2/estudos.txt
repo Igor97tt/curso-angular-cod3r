@@ -1,0 +1,27 @@
+maint.ts = Classe principal que inicia o módulo principal AppModule;
+
+AppModule = Módulo principal que inicia o componente principal AppComponent;
+
+AppComponent = Componente principal que possui todos os outros componentes do projeto;
+
+Componente = Faz referência a um componente visual dentro da spa e pode conter o arquivo ts, o html, e o css. Não é obrigatório css e nem o html pois este pode ser escrito dentro do .ts do componente como uma string;
+
+Diretivas = Existem diretivas de atributo e de estrutura: as de atributo mudam a aparencia ou o comportamento (css) de elementos na página. As de Estrutura alteram o layout adicionando um removendo elementos na DOM = document objetc model (html).
+
+Decorator = Padrao de projeto que define a função de uma classe exercida dentro do projeto. Ex = @component = a classe agora é um componente. @injectable = a classe agora é um serviço que pode ser injetado via injeção de dependencia.
+
+Property binding = faz a ligação de um atributo dentro do html a uma variavel de mesmo nome na classe do componente, pegando o valor da variavel e associando ao html. É uma forma de acessar dados dentro da classe do componente atraves de um atributo no html. utiliza []
+
+Event binding = faz a ligação de um evento no html para um método dentro do componente associado ao html. utiliza ()
+
+one way data binding = html busca informações dentro do ts. ts > html (utiliza binding de atributo)
+
+two way data binding = sentido de alteração nas duas direções: se mudar no ts muda no html e se mudar no html muda no ts. utiliza [(ngModel)].
+
+pipes() = processamentos em cima de variaveis, muda o formato de algo que é apresentado na tela. Util para mudar o formato que chegou de um bd para adequar ao sistema ou cultura.
+
+observables = é uma funcionalidade da biblioteca rxjs que lida com transferência de dados assíncrona (sem resposta imediata na chamada do código) através da implementação de programação reativa. Espera receber a confirmação de um evento e logo após informar a confirmação, faz alguma ação.
+
+services = são classes com o objetivo de organizar e compartilhar métodos e dados entre componentes. Possui as regras que não dizem respeito a parte visual de um componente. Ideal para acessar backend e manter todo o código que não seja específico do componente. @Injectable. Ideal para não repetir o código dentro dos componentes.
+
+Padrão no qual a classe recebe as dependências de uma fonte externa ao invés de criar por conta própria.
