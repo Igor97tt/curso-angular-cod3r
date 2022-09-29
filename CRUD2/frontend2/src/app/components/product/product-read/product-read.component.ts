@@ -13,6 +13,8 @@ export class ProductReadComponent implements OnInit {
 
   constructor(private productService: ProductService) { }
 
+  displayedColumns = ['id', 'name', 'price', 'action'];
+
   ngOnInit(): void {
     this.productService.read().subscribe(products =>{ //Chama o método read de dentro
       //do productService esperando receber uma array de produtos e a confirmação de

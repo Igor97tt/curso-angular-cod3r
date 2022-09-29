@@ -36,4 +36,14 @@ export class ProductService {
     //produtos que foi encontrada através de uma busca com o método "get" dentro da
     //base de dados. Manda como parâmetro a url base.
   }
+
+  readById(id: string): Observable<Product>{
+    const url =`${this.baseUrl}/${id}`
+    return this.http.get<Product>(url)
+  }
+
+  update(product: Product): Observable<Product>{
+    const url =`${this.baseUrl}/${product.id}`
+    return this.http.put<Product>(url, product)
+  }
 }
